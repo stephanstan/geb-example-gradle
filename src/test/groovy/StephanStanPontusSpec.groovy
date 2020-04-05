@@ -25,7 +25,7 @@ def "can navigate to the Stephan Stan Pontus page - Web Services"() {
     at StephanStanPontusPage
 }
 
-    @Ignore
+   @Ignore
 def "can get to the Stephan Stan pontus.html page try different approaches and assertions"() {
 
     /*
@@ -37,17 +37,17 @@ def "can get to the Stephan Stan pontus.html page try different approaches and a
 */ when:
     to StephanStanPontusPage
 
-    and: //hover over to expand the menu
-    interact {
+//    and: //hover over to expand the menu
+//    interact {
 //            moveToElement(manualsMenu.toggle)
-    }
+//    }
 
     /**
      then: … is just making sure we made it to the right place.
      We could add any other assertions here.
      * */
 
-    then: //first link is for the current manual
+//    then: //first link is for the current manual
 //        manualsMenu.links[0].text().endsWith("- CURRENT")
     assert title == "Stephan Stan's Web Services"
     //      assert $("p").text() == "Created May 4, 2002\nLast Updated February 12, 2017"
@@ -73,7 +73,7 @@ def "can get to the Stephan Stan pontus.html page try different approaches and a
     at StephanStanPontusPage
 }
 
-@Ignore
+//@Ignore
     def "click on first 4 links of pontus.html - by ID"() {
 
     when:
@@ -81,15 +81,16 @@ def "can get to the Stephan Stan pontus.html page try different approaches and a
 
     then:         // click on a image by id
 
-    // 1
-//        tkdLink.click()
-//        then:
-//        at TKDStephanGooglePage
-//        driver.navigate().back()
+    atlasLink.click()
+        then:
+        at AnglersAtlasPage
+        driver.navigate().back()
+        then:
+        at StephanStanPontusPage
 
 //        then:
 //        at StephanStanPontusPage
-
+/*
     // 2
     faceBookLink.click()
     then:
@@ -187,7 +188,7 @@ def "click on the various link by ID"() {
 
     when:
     //      manualsMenu.links[0].click()
-
+*/
     then:
     at StephanStanPontusPage
 }

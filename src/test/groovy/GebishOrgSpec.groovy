@@ -1,7 +1,10 @@
 import geb.spock.GebSpec
+import spock.lang.Ignore
 
+@Ignore
 class GebishOrgSpec extends GebSpec {
 
+    @Ignore
     def "can get to the current Book of Geb"() {
         when:
         to GebishOrgHomePage

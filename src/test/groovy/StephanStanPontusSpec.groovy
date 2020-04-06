@@ -3,7 +3,9 @@ import geb.spock.GebReportingSpec
 import org.openqa.selenium.By
 import spock.lang.Stepwise
 import spock.lang.Ignore
+
 import com.pontus.external.AnglersAtlasPage
+import com.pontus.external.CrowfootVillageFamilyPracticePage
 
 /*
 https://www.luckyryan.com/2013/08/28/browser-testing-geb/
@@ -87,8 +89,20 @@ def "can get to the Stephan Stan pontus.html page try different approaches and a
         driver.navigate().back()
         then:
         at StephanStanPontusPage
+        // 4
+        drCrowfootLink.click()
+        then:
+        at CrowfootVillageFamilyPracticePage
+        driver.navigate().back()
 
+//        londonDrugLink.click()
 //        then:
+//        at LondonDrugsPage
+//        driver.navigate().back()
+//        then:
+//        at StephanStanPontusPage
+
+         //        then:
 //        at StephanStanPontusPage
 /*
     // 2

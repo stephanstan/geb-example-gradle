@@ -17,9 +17,10 @@ class StephanStanPontusPage extends Page {
         faceBookLink { $(By.id("id_Facebook")) }
 
         huntFishLicenseLink { $(By.id("id_AlbertaHunting")) }
+*/
 
         drCrowfootLink { $(By.id("id_CrowfootFamily"))  }
-
+/*
         elkIncLink { $(By.id("id_ElkInc"))   }
 */
         atlasLink {  $(By.id("id_AnglerAtlas"))
@@ -32,8 +33,10 @@ class StephanStanPontusPage extends Page {
         }
         redArrowLink {  $(By.id("id_RedArrow"))
         }
+   */
         londonDrugLink {  $(By.id("id_LondonDrugs"))
         }
+        /*
         huntWMULink { $(By.id("id_WMUDescriptions"))
         }
 */

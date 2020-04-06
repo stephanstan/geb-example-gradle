@@ -1,4 +1,5 @@
 import geb.Page
+
 import org.openqa.selenium.By
 
 class StephanStanPontusPage extends Page {
@@ -10,36 +11,20 @@ class StephanStanPontusPage extends Page {
 /*
         versionParagraph { $("p").text() }
         //build list of link references
-
-        tkdLink { $(By.id("id_Poomse")) }
-
-
-        faceBookLink { $(By.id("id_Facebook")) }
-
+*/
+        atlasLink           { $(By.id("id_AnglerAtlas")) }
+        atlasObscuraLink    { $(By.id("id_AtlasObscura")) }
+        drCrowfootLink      { $(By.id("id_CrowfootFamily")) }
+        elkIncLink          { $(By.id("id_ElkInc")) }
+        faceBookLink        { $(By.id("id_Facebook")) }
+        grailsLink          { $(By.id("id_Grails")) }
         huntFishLicenseLink { $(By.id("id_AlbertaHunting")) }
-*/
-
-        drCrowfootLink { $(By.id("id_CrowfootFamily"))  }
-/*
-        elkIncLink { $(By.id("id_ElkInc"))   }
-*/
-        atlasLink {  $(By.id("id_AnglerAtlas"))
-        }
-
-   /*
-        grailsLink { $(By.id("id_Grails"))
-        }
-        tadaLink {  $(By.id("id_TadaList"))
-        }
-        redArrowLink {  $(By.id("id_RedArrow"))
-        }
-   */
-        londonDrugLink {  $(By.id("id_LondonDrugs"))
-        }
-        /*
-        huntWMULink { $(By.id("id_WMUDescriptions"))
-        }
-*/
-    }
+        huntWMULink         { $(By.id("id_WMUDescriptions")) }
+        londonDrugLink      { $(By.id("id_LondonDrugs")) }
+        redArrowLink        { $(By.id("id_RedArrow")) }
+        tadaLink            { $(By.id("id_TadaList")) }
+        tkdLink             { $(By.id("id_Poomse")) }
+        wikiTravelLink      { $(By.id("id_WikiTravel")) }
+}
 
 }

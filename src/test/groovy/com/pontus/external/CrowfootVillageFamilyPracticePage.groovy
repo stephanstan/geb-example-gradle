@@ -10,4 +10,4 @@ class CrowfootVillageFamilyPracticePage extends Page {
     static at = { title == "Crowfoot Village Family Practice – Exceptional Standard of Care for Calgarians" }
 
 
-}g
+}

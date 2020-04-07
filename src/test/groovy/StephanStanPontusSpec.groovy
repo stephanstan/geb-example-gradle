@@ -6,13 +6,16 @@ import spock.lang.Ignore
 import com.pontus.external.AnglersAtlasPage
 import com.pontus.external.CrowfootVillageFamilyPracticePage
 import com.pontus.external.AlbertaRELMPage
-import com.pontus.external.FaceBookHomePage
+import com.pontus.external.ERegistryPage
+import com.pontus.external.FaceBookPage
 import com.pontus.external.GrailsDownloadPage
+import com.pontus.external.MerriamWebsterPage
+import com.pontus.external.MitOpenCourseWarePage
 import com.pontus.external.RedArrowBusPage
+import com.pontus.external.SimpleSimonPiesPage
 import com.pontus.external.TKDStephanGooglePage
 import com.pontus.external.AtlasObscuraPage
 import com.pontus.external.WikiTravelPage
-import com.pontus.external.HuntMWUPage
 
 /*
 https://www.luckyryan.com/2013/08/28/browser-testing-geb/
@@ -105,7 +108,7 @@ class StephanStanPontusSpec extends GebReportingSpec {
 
         faceBookLink.click()
         then:
-        at FaceBookHomePage
+        at FaceBookPage
         driver.navigate().back()
 
         then:
@@ -176,6 +179,30 @@ class StephanStanPontusSpec extends GebReportingSpec {
  //     when:
     //      manualsMenu.links[0].click()
 */
+        then:
+        at StephanStanPontusPage
+
+        mitLink.click()
+        at MitOpenCourseWarePage
+        driver.navigate().back()
+        then:
+        at StephanStanPontusPage
+
+        simonPiesLink.click()
+        at SimpleSimonPiesPage
+        driver.navigate().back()
+        then:
+        at StephanStanPontusPage
+
+        eRegistryLink.click()
+        at ERegistryPage
+        driver.navigate().back()
+        then:
+        at StephanStanPontusPage
+
+        merriamWebsterLink.click()
+        at MerriamWebsterPage
+        driver.navigate().back()
         then:
         at StephanStanPontusPage
     }

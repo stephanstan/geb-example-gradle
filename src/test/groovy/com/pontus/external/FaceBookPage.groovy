@@ -5,6 +5,6 @@ package com.pontus.external
 
 import geb.Page
 
-class FaceBookHomePage extends Page {
+class FaceBookPage extends Page {
     static at = { title == "Facebook - Log In or Sign Up" }
 }

@@ -9,6 +9,7 @@ import com.pontus.external.AlbertaRELMPage
 import com.pontus.external.ERegistryPage
 import com.pontus.external.FaceBookPage
 import com.pontus.external.GrailsDownloadPage
+import com.pontus.external.GeoCachingPage
 import com.pontus.external.MerriamWebsterPage
 import com.pontus.external.MitOpenCourseWarePage
 import com.pontus.external.RedArrowBusPage
@@ -16,6 +17,7 @@ import com.pontus.external.SimpleSimonPiesPage
 import com.pontus.external.TKDStephanGooglePage
 import com.pontus.external.AtlasObscuraPage
 import com.pontus.external.WikiTravelPage
+import com.pontus.external.ZooniversePage
 
 /*
 https://www.luckyryan.com/2013/08/28/browser-testing-geb/
@@ -157,7 +159,7 @@ class StephanStanPontusSpec extends GebReportingSpec {
 
     }
 
- //   @Ignore
+//    @Ignore
     def "click on the various link by ID"() {
 
         when:
@@ -205,6 +207,19 @@ class StephanStanPontusSpec extends GebReportingSpec {
         driver.navigate().back()
         then:
         at StephanStanPontusPage
+
+        geocacheLink.click()
+        at GeoCachingPage
+        driver.navigate().back()
+        then:
+        at StephanStanPontusPage
+
+        zooLink.click()
+//        at ZooniversePage
+        driver.navigate().back()
+        then:
+        at StephanStanPontusPage
+
     }
 
 
